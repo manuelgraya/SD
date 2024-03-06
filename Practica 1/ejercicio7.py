@@ -13,8 +13,7 @@ def dict_add(mydict, t):
         raise ValueError ("El elemento no puede ser nulo o no es una tupla de elementos")
     else:
         mydict = mydict.copy()
-        mydict[t[0]] = t[1]
-        #mydict.append(t[0], t[1])
+        mydict[t[0]] = t[1] #Añade el elemento t al diccionario mydict 
         return mydict
 
 def main():
