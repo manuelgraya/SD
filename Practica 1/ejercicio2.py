@@ -11,4 +11,6 @@ import os
 path_value = os.getenv('PATH')
 
 # Mostrar en pantalla el valor de la variable PATH
-print("La ruta es:" ,path_value)
+print("\nLa ruta es:" ,path_value)
+
+print("\n\n" ,os.environ['PATH'])

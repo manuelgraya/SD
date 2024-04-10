@@ -7,18 +7,21 @@ import shutil
 import filecmp
 import os
 
-shutil.copy('./Practica 1/ejemplos/data_file.txt', './copia.txt')#copia el archivo data_file.txt en copia.txt
 
-#with open('./copia.txt', 'r') as file:
-#    print(file.read())
+ruta = 'C:/CARRERA/segundo/SD/Practica 1/ejemplos/'
+archivo_origen = ruta + 'data_file.txt'
+archivo_destino = './SD/Practica 1/ejemplos/copia.txt'
 
-#comprobamos que los archivos son iguales
-file1 = open('./Practica 1/ejemplos/data_file.txt', 'r')
-file2 = open('./copia.txt', 'r')
+shutil.copy(archivo_origen, archivo_destino)
+
+"""file1 = open(archivo_origen, 'r')
+file2 = open('./SD/Practica 1/ejemplos/copia.txt', 'r')
 igual = file1.read() == file2.read()
-print(igual)
+print(igual)"""
 
 # Comparar los archivos
 
-bool=filecmp.cmp('./Practica 1/ejemplos/data_file.txt', './copia.txt', shallow=False)
+#comprobamos que los archivos son iguales
+bool=filecmp.cmp(archivo_origen, archivo_destino, shallow=False)
 print(bool)
+os.remove(archivo_destino)

@@ -23,13 +23,13 @@ def main():
 
         # Ejemplo 2
         mylist = [3, 7]
-        e = 'x'
+        e = 3
         resultado = list_del(mylist, e)
         print(f"La lista resultante es: {resultado}")
 
         # Ejemplo 3
-        mylist = [10, 15]
-        e = 'cadena caracteres'
+        mylist = [10, 15, 10]
+        e = 10
         resultado = list_del(mylist, e)
         print(f"La lista resultante es: {resultado}")
 
