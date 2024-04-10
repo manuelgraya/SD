@@ -4,14 +4,14 @@ HOST = 'localhost'    # The server host
 PORT = 50007          # The listening port
 
 # Create a socket
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind((HOST, PORT))
-s.listen(1)
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Create a TCP socket
+s.bind((HOST, PORT)) # Bind the socket to the host and port
+s.listen(1) # Escuchar una conexión
 
 # Accept the connection from the client
-conn, addr = s.accept()
-print('Connected by', addr)
-
+conn, addr = s.accept() # Accept the connection from the client
+print('Connected by', addr) # Print the address of the client
+ 
 # Receive the data from the client
 data = b''
 while True:

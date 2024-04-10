@@ -10,7 +10,7 @@ def main(host, port, filein):
     s.connect(remote_addr)
 
     print("Sending the file")
-    with open(filein, 'r') as infile:
+    with open('E:/1 CARRERA/SD/Practica 2/Examples-20240409/filein.pdf', 'r') as infile:
         data = infile.read()
         size = len(data)
         print("File size if of " + str(size))
